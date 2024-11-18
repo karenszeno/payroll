@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f4f5f7;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #002d57;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    transition: width 0.3s ease;
+}
+
+.sidebar h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #0a3e7f;
+}
+
+.sidebar nav ul li a.active {
+    background-color: #0a3e7f;
+}
+
+.footer {
+    margin-top: 20px;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Sidebar Collapsed */
+.sidebar.collapsed {
+    width: 60px;
+    overflow: hidden;
+}
+
+.sidebar.collapsed h2 {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.sidebar.collapsed nav ul li a {
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 10px 5px;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #002d57;
+}
+
+header p {
+    color: #555;
+}
+
+/* Data Section */
+.data-section h2 {
+    font-size: 1.5rem;
+    color: #002d57;
+    margin-top: 20px;
+}
+
+.data-actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.data-actions a {
+    padding: 10px 15px;
+    background-color: #0a3e7f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.data-actions a:hover {
+    background-color: #0056a3;
+}
+
+/* Table Styling */
+.table-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+table thead {
+    background-color: #0a3e7f;
+    color: #fff;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f4f5f7;
+}
+
+.status.paid {
+    color: #169257;
+    font-weight: bold;
+}
+
+.status.unpaid {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        left: -250px;
+        transition: left 0.3s ease;
+    }
+
+    .sidebar.show {
+        left: 0;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+}
+
+.toggle-sidebar {
+    display: none;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #002d57;
+    color: #fff;
+    border: none;
+    font-size: 1.5rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+@media screen and (max-width: 768px) {
+    .toggle-sidebar {
+        display: block;
+    }
+}
