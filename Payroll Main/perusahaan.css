@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f4f5f7;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #002d57;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+}
+
+.sidebar nav ul li a.active {
+    background-color: #0a3e7f;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+/* Sub-menu Styling */
+.submenu {
+    list-style: none;
+    margin-left: 20px; /* Memberikan jarak indentasi ke sub-menu */
+    margin-top: 10px;
+}
+
+.submenu li a {
+    font-size: 0.9rem; /* Ukuran font lebih kecil untuk sub-menu */
+    color: #ffffff;    /* Warna font putih untuk sub-menu */
+    text-decoration: none;
+}
+
+.submenu li a:hover {
+    color: #cccccc;    /* Warna berubah saat hover */
+}
+
+/* Footer */
+.footer {
+    margin-top: 20px;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #002d57;
+}
+
+header p {
+    color: #555;
+}
+
+.data-section h2 {
+    font-size: 1.5rem;
+    color: #002d57;
+    margin-top: 20px;
+}
+
+.data-actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.data-actions input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex: 1;
+}
+
+.data-actions button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #0a3e7f;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.table-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+table thead {
+    background-color: #0a3e7f;
+    color: #fff;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+}
+
+.status.paid {
+    color: #169257;
+    font-weight: bold;
+}
+
+.status.unpaid {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f4f5f7;
+}
+/* Tombol toggle sidebar */
+.toggle-sidebar {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #002d57;
+    color: #fff;
+    border: none;
+    font-size: 1.5rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  /* Submenu: Default disembunyikan */
+  .submenu {
+    display: none;
+    list-style: none;
+    margin-top: 10px;
+  }
+  
+  /* Submenu yang tampil */
+  .submenu.show {
+    display: block;
+  }
+  
+  /* Sidebar ketika collapsed */
+  .sidebar.collapsed {
+    width: 60px; /* Sidebar lebih kecil */
+    overflow: hidden;
+    transition: width 0.3s ease;
+  }
+  
+  .sidebar.collapsed h2 {
+    font-size: 1rem; /* Perkecil logo/judul */
+  }
+  
+  .sidebar.collapsed nav ul li a {
+    font-size: 0.8rem; /* Perkecil menu */
+    text-align: center; /* Menu lebih rata */
+    padding: 5px;
+  }
+  /* Hover untuk Submenu */
+.sidebar ul li:hover > .submenu {
+    display: block; /* Tampilkan submenu saat dihover */
+  }
+  
+  /* Submenu: Default disembunyikan */
+  .submenu {
+    display: none; /* Sembunyikan submenu */
+    list-style: none;
+    margin-top: 10px;
+    padding-left: 15px;
+  }
+  
+  .submenu li a {
+    font-size: 0.9rem; /* Ukuran font submenu */
+    padding: 5px;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .submenu li a:hover {
+    background-color: #0a3e7f; /* Warna latar belakang saat hover */
+    border-radius: 5px;
+    display: block;
+  }
+  

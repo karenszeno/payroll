@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #002D57;
+    --body-color: #ffffff;
+    --sidebar-color: #002D57;
+    --text-color: #ffffff;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background: var(--body-color);
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #002d57;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.menu, .settings {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li, .settings li {
+    margin-bottom: 1.5rem;
+}
+
+.menu li a, .settings li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 30;
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 220px;
+    background-color: #F7F9FC;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.card-section {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.card-info, .shortcut {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 300px;
+}
+
+.card-info h2, .shortcut h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.card-details {
+    background: #002D57;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.shortcut-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.shortcut-card {
+    background: #002D57;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1rem;
+    flex: 1;
+    min-width: 120px;
+}
+
+.activity-section, .history-section {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.activity-section h2, .history-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.activity-table, .history-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.activity-table th, .history-table th, 
+.activity-table td, .history-table td {
+    padding: 10px;
+    text-align: left;
+}
+
+.activity-table th, .history-table th {
+    background: #f1f1f1;
+}
+
+.activity-table td, .history-table td {
+    border-bottom: 1px solid #f1f1f1;
+}
+

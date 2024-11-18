@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Transaksi</title>
+    <link rel="stylesheet" href="transaksi.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Payroll BCA</h2>
+        <nav>
+            <ul>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Karyawan</a></li>
+                <li><a href="#">Transaksi</a>
+                <!-- <li><a href="#" class="active">Transaksi</a> -->
+                    <ul class="submenu">
+                        <li><a href="#">Detail</a></li>
+                        <li><a href="#">History</a></li>
+                        <li><a href="#">Jadwal</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Perusahaan</a></li>
+                <li><a href="#">Laporan</a></li>
+            </ul>
+        </nav>
+        <div class="footer">
+            <a href="#">Bantuan</a>
+            <a href="#">Pengaturan</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>Transaksi</h1>
+            <p>Senin, 4 November 2024</p>
+        </header>
+
+        <section class="data-section">
+            <h2>Data Transaksi</h2>
+            <div class="data-actions">
+                <input type="text" placeholder="Search here...">
+                <button class="filter-btn">Filter</button>
+                <button class="download-btn">Unduh Data</button>
+                <button class="add-btn">Tambah Data</button>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nama</th>
+                            <th>Department</th>
+                            <th>Jabatan</th>
+                            <th>Jumlah (Rp)</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01</td>
+                            <td>Ananda Leon</td>
+                            <td>Marketing</td>
+                            <td>Manager</td>
+                            <td>5.000.000</td>
+                            <td class="status unpaid">Tidak Terbayar</td>
+                            <td>...</td>
+                        </tr>
+                        <tr>
+                            <td>02</td>
+                            <td>Amarilis C</td>
+                            <td>IT</td>
+                            <td>Manager</td>
+                            <td>11.000.000</td>
+                            <td class="status paid">Terbayar</td>
+                            <td>...</td>
+                        </tr>
+                        <tr>
+                            <td>03</td>
+                            <td>Karen Candara</td>
+                            <td>Sales</td>
+                            <td>Manager</td>
+                            <td>8.000.000</td>
+                            <td class="status paid">Terbayar</td>
+                            <td>...</td>
+                        </tr>                   
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="karyawan.css">
+  <title>Karyawan</title>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Payroll <span>BCA</span></h2>
+    <nav>
+      <ul>
+        <li><a href="#">Transaksi</a></li>
+        <li>
+          <a href="#">Perusahaan</a>
+          <ul class="submenu">
+            <li><a href="karyawan.html" class="active">Karyawan</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Jadwal</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="footer">
+      <a href="#">Logout</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <header>
+      <h1>Karyawan</h1>
+      <p>Halo, Leo | Super Admin</p>
+    </header>
+    <section class="data-section">
+      <div class="data-actions">
+        <input type="text" placeholder="Search here...">
+        <button>Cari</button>
+        <button>Unduh Data</button>
+        <button>Tambah Data</button>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nama</th>
+              <th>Email</th>
+              <th>Jabatan</th>
+              <th>Departemen</th>
+              <th>Tanggal Buat</th>
+              <th>Tanggal Update</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Andi Surya</td>
+              <td>andi.surya@gmail.com</td>
+              <td>Manager</td>
+              <td>Sales</td>
+              <td>22/11/24</td>
+              <td>24/11/24</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Budi Hartono</td>
+              <td>budi.hartono@gmail.com</td>
+              <td>Staff</td>
+              <td>IT</td>
+              <td>22/11/24</td>
+              <td>24/11/24</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Clara Widya</td>
+              <td>clara.widya@gmail.com</td>
+              <td>Supervisor</td>
+              <td>Marketing</td>
+              <td>22/11/24</td>
+              <td>24/11/24</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Dian Prasetya</td>
+              <td>dian.prasetya@gmail.com</td>
+              <td>Manager</td>
+              <td>Finance</td>
+              <td>22/11/24</td>
+              <td>24/11/24</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Elisa Marlina</td>
+              <td>elisa.marlina@gmail.com</td>
+              <td>Staff</td>
+              <td>HR</td>
+              <td>22/11/24</td>
+              <td>24/11/24</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // Fungsi toggle submenu
+    const perusahaanMenu = document.querySelector('.sidebar ul li:nth-child(2) > a');
+    const submenu = document.querySelector('.sidebar ul li:nth-child(2) .submenu');
+
+    perusahaanMenu.addEventListener('click', (e) => {
+      e.preventDefault();
+      submenu.classList.toggle('show');
+    });
+
+    // Fungsi toggle sidebar
+    const sidebar = document.querySelector('.sidebar');
+    const toggleSidebarButton = document.createElement('button');
+    toggleSidebarButton.textContent = "☰";
+    toggleSidebarButton.classList.add('toggle-sidebar');
+    document.body.insertBefore(toggleSidebarButton, document.body.firstChild);
+
+    toggleSidebarButton.addEventListener('click', () => {
+      sidebar.classList.toggle('collapsed');
+    });
+  </script>
+</body>
+</html>
+

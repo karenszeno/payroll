@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="perusahaan.css">
+  <title>Perusahaan</title>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Payroll <span> BCA </span></h2>
+    <nav>
+      <ul>
+        <li><a href="#">Transaksi</a></li>
+        <li>
+          <a href="perusahaan.html">Perusahaan</a>
+          <ul class="submenu">
+            <li><a href="karyawan.html">Karyawan</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Jadwal</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="footer">
+      <a href="#">Logout</a>
+    </div>
+  </div>
+
+  <!-- <script>
+    // Fungsi untuk toggle submenu "Perusahaan"
+    const perusahaanMenu = document.querySelector('.sidebar ul li:nth-child(2) > a'); // Menu Perusahaan
+    const submenu = document.querySelector('.sidebar ul li:nth-child(2) .submenu');  // Submenu Perusahaan
+
+    perusahaanMenu.addEventListener('click', (e) => {
+      e.preventDefault(); // Mencegah link langsung reload
+      submenu.classList.toggle('show'); // Menambahkan/menghapus class 'show'
+    });
+
+    // Fungsi untuk toggle seluruh sidebar
+    const sidebar = document.querySelector('.sidebar');
+    const toggleSidebarButton = document.createElement('button');
+    toggleSidebarButton.textContent = "☰"; // Tombol hamburger
+    toggleSidebarButton.classList.add('toggle-sidebar');
+    document.body.insertBefore(toggleSidebarButton, document.body.firstChild);
+
+    toggleSidebarButton.addEventListener('click', () => {
+      sidebar.classList.toggle('collapsed'); // Menambahkan/menghapus class 'collapsed'
+    });
+  </script> -->
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <header>
+      <h1>Perusahaan</h1>
+      <p>Halo, Leo | Super Admin</p>
+    </header>
+    <section class="data-section">
+      <div class="data-actions">
+        <input type="text" placeholder="Search here...">
+        <button>Cari</button>
+        <button>Unduh Data</button>
+        <button>Tambah Data</button>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nama Perusahaan</th>
+              <th>Alamat</th>
+              <th>Email</th>
+              <th>Telepon</th>
+              <th>Jumlah Karyawan</th>
+              <th>Jumlah Dana di Bank</th>
+              <th>Tanggal Buat</th>
+              <th>Tanggal Update</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Universitas Kristen Duta Wacana</td>
+              <td>Jl. Wahidin</td>
+              <td>ukdw@gmail.com</td>
+              <td>08953565447</td>
+              <td>100</td>
+              <td>Rp 200.000.000</td>
+              <td>22/11/24</td>
+              <td>24/11/24</td>
+              <td>
+                <button onclick="location.href='edit_perusahaan.html'">Edit</button>
+                <button onclick="confirm('Apakah Anda yakin ingin menghapus data ini?')">Hapus</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
+

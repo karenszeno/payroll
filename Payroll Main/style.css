@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* COLORS */
+    --primary-color: #002D57;
+    --body-color: #ffffff;
+    --text-color-1: #ffffff;
+    --sidebar-color: #ffffff;
+}
+
+body {
+    display: flex;
+    background: var(--body-color);
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* SIDEBAR */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    background: #002D57;
+    width: 300px; /* Perbesar lebar sidebar menjadi 300px */
+    min-height: 100vh; /* Membuat sidebar memenuhi tinggi layar */
+    padding: 20px;
+    border-radius: 8px;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* DASHBOARD */
+.content {
+    position: relative;
+    padding: 20px;
+}
+
+.header-content .dashboard-text {
+    margin-left: 20px;
+    margin-top: 1rem;
+}
+
+.header-content .dashboard-text h1 {
+    font-size: 1.8rem;
+}
+
+.mother-container {
+    margin: 1rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 20px; /* Mengatur jarak antar elemen */
+}
+
+.box {
+    display: flex;
+    background: var(--primary-color);
+    color: var(--text-color-1);
+    height: 12rem;
+    width: 16rem;
+    padding: 20px;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* TABLE */
+.table--activity .table-container {
+    display: flex;
+    overflow: auto;
+}
+
+.table--activity .table-bg {
+    background: var(--sidebar-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    min-height: 20rem;
+    margin: 20px;
+    padding: 20px;
+    overflow: auto;
+}
+
+.table--activity .table-bg table {
+    width: 100%;
+    font-size: 1rem;
+}
+
+/* MEDIA QUERY */
+@media (max-width: 1200px) {
+    .sidebar {
+        width: 200vh;  /* Lebar sidebar pada layar besar yang lebih kecil */
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;      /* Lebar penuh untuk layar kecil */
+        min-height: auto; /* Tinggi otomatis */
+        padding: 15px;    /* Padding lebih kecil */
+        border-radius: 0; /* Menghilangkan border-radius untuk layar kecil */
+    }
+
+    .header-content .dashboard-text {
+        margin-left: 10px;
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .header-content .dashboard-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .box {
+        width: 90%;
+        margin: 0;
+    }
+
+    .table--activity .table-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
